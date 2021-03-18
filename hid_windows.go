@@ -33,7 +33,7 @@ type winDevice struct {
 
 // returns the casted handle of the device
 func (d *winDevice) h() C.HANDLE {
-	return (C.HANDLE)((unsafe.Pointer)(d.handle))
+	return (C.HANDLE)((uintptr)(d.handle))
 }
 
 // checks if the handle of the device is valid
